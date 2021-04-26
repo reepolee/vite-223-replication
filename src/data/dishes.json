@@ -1,0 +1,65 @@
+{
+    "dishes": [
+        {
+            "id": 1,
+            "image": "/images/responsive/IMG_20200813_103615.jpg",
+            "title": "Farfalle pomidori",
+            "chef": "Rozi",
+            "ingredients": [
+                { "amount": "500g", "text": "Pasta" },
+                { "amount": "250g", "text": "Pomidori" }
+            ],
+            "steps": [{ "text": "Daj vret 5l vode" }, { "text": "Po 10 min odcedi in dodaj pomidore" }, { "text": "Serviraj" }]
+        },
+
+        {
+            "id": 2,
+            "image": "/images/responsive/IMG_20210420_082556.jpg",
+            "title": "Creatimove sladice",
+            "chef": "Gregor Šink (23)",
+            "ingredients": [
+                { "amount": "500g", "text": "Čokolade" },
+                { "amount": "250g", "text": "Oreščkov" }
+            ],
+            "steps": [
+                { "text": "Na parni kopeli stopiš čokolodo" },
+                { "text": "Čokoladi dodaš oreščke" },
+                { "text": "Raztegneš na peki papir in čez pol ure ješ" }
+            ]
+        },
+
+        {
+            "id": 3,
+            "image": "/images/responsive/IMG_20210215_071410_7.jpg",
+            "title": "Rugbrød",
+            "chef": "Aleš Vaupotič",
+            "ingredients": [
+                { "amount": "500g", "text": "črne moke" },
+                { "amount": "500g", "text": "semen" },
+                { "amount": "750ml", "text": "vode" },
+                { "amount": "10g", "text": "soli" },
+                { "amount": "10g", "text": "suhega kvasa" }
+            ],
+            "steps": [
+                { "text": "Zmešaš semena in sol z vodo" },
+                { "text": "Po 8h dodaš moko in kvas" },
+                { "text": "Vzhajaš 6 ur" },
+                { "text": "Naložiš v model, vzhajaš 1h" },
+                { "text": "Pečeš 1h na 180&deg;C" }
+            ]
+        },
+
+        {
+            "id": 4,
+            "image": "/images/responsive/IMG_20210319_131936_7.jpg",
+            "title": "Planica torta",
+            "chef": "Aleš Vaupotič",
+            "ingredients": [
+                { "amount": "300g", "text": "čokoladni mousse" },
+                { "amount": "300g", "text": "borovničev mousse" },
+                { "amount": "300g", "text": "vanilijev mousse" }
+            ],
+            "steps": [{ "text": "Pene nalagaš eno na drugo" }, { "text": "Hladiš vsako plast 4 ure preden dodaš naslednjo" }]
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer base {
+    html {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+        @apply min-h-screen;
+    }
+
+    body {
+        @apply antialiased;
+        @apply tracking-tight;
+        @apply flex;
+        @apply flex-col;
+        @apply bg-gray-100;
+        @apply dark:bg-gray-900;
+        @apply dark:text-gray-200;
+    }
+
+    body,
+    header {
+        transition: background-color 1.5s, color 1.5s;
+    }
+
+    body::-webkit-scrollbar {
+        width: 12px;
+        @apply bg-gray-100;
+        @apply dark:bg-gray-900;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        @apply bg-gray-700;
+        @apply dark:bg-gray-200;
+        outline: 1px solid var(--tw-gray-900);
+    }
+
+    body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--tw-gray-50);
+    }
+
+    .gridbox {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @screen md {
+        .gridbox {
+            grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr));
+        }
+    }
+
+    .receptbox {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    @screen md {
+        .receptbox {
+            grid-template-columns: 480px 1fr;
+        }
+    }
+}

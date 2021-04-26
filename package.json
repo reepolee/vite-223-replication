@@ -1,0 +1,76 @@
+{
+    "name": "best-chefs-of-creatim",
+    "description": "Najboljši kuharji so na Creatimu",
+    "keywords": [
+        "svelte",
+        "routify",
+        "vite",
+        "tailwind",
+        "jit",
+        "rollup"
+    ],
+    "license": "CS",
+    "author": "Ales Vaupotic <ales.vaupotic@creatim.com> (https://twitter.com/alesvaupotic)",
+    "version": "0.1.0",
+    "scripts": {
+        "dev": "run-p dev:routify dev:vite",
+        "build": "routify -b && vite build",
+        "serve": "vite preview",
+        "dev:routify": "routify",
+        "dev:vite": "vite",
+        "spank": "spank",
+        "build:pwa-bundle": "esbuild --bundle src/sw.js --outfile=public/sw.generated.js --define:process.env.NODE_ENV=\"'production'\"",
+        "build:pwa-inject": "workbox injectManifest",
+        "build:images": "node prepareImages.js",
+        "build:production": "run-s build:images build build:pwa-bundle build:pwa-inject spank"
+    },
+    "devDependencies": {
+        "@roxi/routify": "^2.15.1",
+        "@sveltejs/vite-plugin-svelte": "next",
+        "@tailwindcss/aspect-ratio": "^0.2.0",
+        "autoprefixer": "^10.2.5",
+        "cssnano": "^5.0.1",
+        "esbuild": "^0.11.15",
+        "fast-glob": "^3.2.5",
+        "fs-extra": "^9.1.0",
+        "mdsvex": "^0.9.0",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.2.12",
+        "postcss-load-config": "^3.0.1",
+        "rehype-autolink-headings": "^5.0.1",
+        "rehype-slug": "^4.0.1",
+        "remark-abbr": "^1.4.1",
+        "remark-github": "^10.0.1",
+        "remark-slug": "^6.0.0",
+        "routify-plugin-frontmatter": "^1.0.1",
+        "sharp": "^0.28.1",
+        "spank": "git+https://github.com/reepolee/spank.git",
+        "svelte": "^3.37.0",
+        "svelte-preprocess": "^4.7.2",
+        "tailwindcss": "^2.1.2",
+        "tossr": "^1.4.2",
+        "vite": "2.2.2",
+        "workbox-cli": "^6.1.5",
+        "vite-plugin-restart": "0.0.2"
+    },
+    "routify": {
+        "extensions": [
+            "md",
+            "svelte",
+            "svx"
+        ],
+        "plugins": {
+            "routify-plugin-frontmatter": {}
+        }
+    },
+    "appConfig": {
+        "port": 5000,
+        "assetsDir": "static",
+        "template": "dist/__app.html",
+        "distDir": "dist",
+        "buildDir": "dist/build"
+    },
+    "ava": {
+        "verbose": true
+    }
+}
