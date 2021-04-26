@@ -12,6 +12,7 @@ npm run dev
 
 ## This should be running fine with Vite 2.2.2. 
 
-To break it, please change Vite to ```
+To break it, please change Vite to 
+```js
 "vite": "2.2.3",
 ```
