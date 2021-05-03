@@ -44,14 +44,16 @@
         "remark-slug": "^6.0.0",
         "routify-plugin-frontmatter": "^1.0.1",
         "sharp": "^0.28.1",
-        "spank": "git+https://github.com/reepolee/spank.git",
+        "spank": "github:reepolee/spank",
         "svelte": "^3.37.0",
         "svelte-preprocess": "^4.7.2",
         "tailwindcss": "^2.1.2",
         "tossr": "^1.4.2",
         "vite": "2.2.2",
         "workbox-cli": "^6.1.5",
-        "vite-plugin-restart": "0.0.2"
+        "vite-plugin-restart": "0.0.2",
+        "js-validators": "github:reepolee/js-validators#0.1.1",
+        "js-helpers": "github:reepolee/js-helpers#0.1.9"
     },
     "routify": {
         "extensions": [

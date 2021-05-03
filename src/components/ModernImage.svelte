@@ -1,5 +1,5 @@
 <script>
-    import { webp as _webp, avif as _avif, jpeg as _jpeg } from "$helpers/helpers";
+    import { webp, avif, img as _img } from "js-helpers";
     export let src;
     export let alt;
     export let visible = false;
@@ -12,18 +12,15 @@
 <picture>
     <source
         type="image/avif"
-        srcset="{_avif(src, 300)} 320w, {_avif(src, 400)} 640w, {_avif(src, 800)} 960w, {_avif(src, 1200)} 1600w, {_avif(src, 1920)}"
+        srcset="{avif(src, 300)} 320w, {avif(src, 400)} 640w, {avif(src, 800)} 960w, {avif(src, 1200)} 1600w, {avif(src, 1920)}"
         {sizes}
     />
     <source
         type="image/webp"
-        srcset="{_webp(src, 300)} 320w, {_webp(src, 400)} 640w, {_webp(src, 800)} 960w, {_webp(src, 1200)} 1600w, {_webp(src, 1920)}"
+        srcset="{webp(src, 300)} 320w, {webp(src, 400)} 640w, {webp(src, 800)} 960w, {webp(src, 1200)} 1600w, {webp(src, 1920)}"
         {sizes}
     />
-    <source
-        srcset="{_jpeg(src, 300)} 320w, {_jpeg(src, 400)} 640w, {_jpeg(src, 800)} 960w, {_jpeg(src, 1200)} 1600w, {_jpeg(src, 1920)}"
-        {sizes}
-    />
+    <source srcset="{_img(src, 300)} 320w, {_img(src, 400)} 640w, {_img(src, 800)} 960w, {_img(src, 1200)} 1600w, {_img(src, 1920)}" {sizes} />
     <img
         {src}
         {alt}

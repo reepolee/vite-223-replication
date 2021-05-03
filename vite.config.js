@@ -5,6 +5,8 @@ import { resolve } from "path";
 
 const production = process.env.NODE_ENV === "production";
 
+console.log(__dirname);
+
 export default defineConfig({
     server: {
         open: true,
