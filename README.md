@@ -1,5 +1,9 @@
 # vite-223-replication
 
+# ----------------------------------------------------------------------
+# THIS REPOSITORY IS ARCHIVED AS IT SERVED AS AN ISSUE REPRODUCTION ONLY
+# ----------------------------------------------------------------------
+
 ## Setup
 
 ```
